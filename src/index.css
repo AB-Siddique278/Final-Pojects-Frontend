@@ -70,3 +70,7 @@ header a{
 .product-info a{
   text-decoration: none;
 }
+
+.img-large{
+  max-width: 100%;
+}
