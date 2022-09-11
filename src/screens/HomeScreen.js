@@ -5,6 +5,8 @@ import { useEffect, useReducer } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import logger from "use-reducer-logger";
+import { Col, Row } from "react-bootstrap";
+import Product from "../components/Product";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -56,24 +58,14 @@ function HomeScreen() {
                 <div>{error}</div>
             ) : (
 
-                products.map((product) => (
-                    <div className="card product" key={product.slug}>
-                        <Link to={`/product/${product.slug}`}>
-                            <img className="card-img-top" src={product.image} alt={product.name} />
-                        </Link>
-
-                        <div className='product-info'>
-
-                            <Link to={`/product/${product.slug}`}>
-                                <p>{product.name} </p>
-                            </Link>
-
-                            <p>{product.price}</p>
-                            <button type="button" class="btn btn-warning ">Add to Card</button>
-                        </div>
-                    </div>
+                <Row> 
+                {products.map((product) => (
+                    <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                    <Product product={product}></Product>
+                    </Col>
             
-            ))
+            ))}
+            </Row>
             )}
 
         </div>
