@@ -81,7 +81,7 @@ function ProductScreen() {
 
 
                     <Row className="mt-4">
-                        <Col md={6}>
+                        <Col md={6} className="productimage">
                             <img
                                 className="img-large"
                                 src={product.image}
@@ -135,7 +135,7 @@ function ProductScreen() {
                                         {product.countInStock > 0 && (
                                             <ListGroup.Item>
                                                 <div className="d-grid">
-                                                    <Button onClick={addToCartHandler} variant="primary">Add to Cart</Button>
+                                                    <Button onClick={addToCartHandler} variant="warning">Add to Cart</Button>
                                                 </div>
                                             </ListGroup.Item>
                                         )}

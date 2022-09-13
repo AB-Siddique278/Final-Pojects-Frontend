@@ -77,3 +77,14 @@ header a{
 .img-thumbnail {
   height: 80px;
 }
+
+ /* for card images   */
+
+.imagese img{
+
+  height: 100px;
+}
+
+.productimage img{
+  height: 500px;
+}
