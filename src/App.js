@@ -8,6 +8,7 @@ import ProductScreen from './screens/ProductScreen';
 import { Badge, Container, Nav, Navbar } from 'react-bootstrap';
 import { useContext } from 'react';
 import { Store } from './screens/Store';
+import CartScreen from './screens/CartScreen';
 
 
 
@@ -47,6 +48,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/cart" element={<CartScreen />} />
           </Routes>
           </Container>
           <footer>
